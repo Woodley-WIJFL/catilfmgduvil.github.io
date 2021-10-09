@@ -1,0 +1,346 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(./image/i2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background: url(./image/bh.jpg);
+}
+.responsive,
+.responsive-b {
+  display: none;
+}
+
+.table-responsive {
+  display: none;
+}
+.logo {
+  float: left;
+  margin: 0 50px;
+}
+.button {
+  float: right;
+  margin: 0 200px;
+  display: flex;
+}
+.button-tirage,
+.button-calendrier {
+  margin: 5px 20px;
+  background: url(./image/bh.jpg);
+  color: #fff;
+  border: #fff 1px solid;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  font-family: cooper black;
+}
+.button-tirage:hover,
+.button-calendrier:hover,
+.button-final:hover {
+  color: #ffc600;
+  border: #ffc600 1px solid;
+  cursor: pointer;
+}
+.button-final {
+  margin: 0 560px;
+  background: url(./image/bh.jpg);
+  color: #fff;
+  border: #fff 1px solid;
+  border-radius: 10px;
+  width: 200px;
+  height: 80px;
+  font-size: 50px;
+  font-family: cooper black;
+}
+/* button calendrier  */
+
+.calendrier {
+  margin: 5px 20px;
+  text-decoration: none;
+  background: url(./image/bh.jpg);
+  color: #fff;
+  height: auto;
+  line-height: 50px;
+  font-size: 30px;
+  font-family: cooper black;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  /* padding: 0 20px;  */
+}
+.calendrier:hover {
+  border: 1px solid rgb(55, 185, 245);
+}
+
+.r-container {
+  height: 200px;
+  width: 90%;
+  margin: 0 auto;
+}
+/* liste equipe */
+table tr td {
+  text-align: center;
+  font-family: cooper black;
+}
+
+table {
+  width: 90%;
+  margin: 70px 60px;
+}
+table thead {
+  font-family: wide latin;
+  margin: 50px 0;
+}
+tbody tr td {
+  padding: 20px;
+}
+.titre {
+  background: url(./image/bh.jpg);
+  color: #ffc600;
+}
+.titre th {
+  font-size: 30px;
+}
+.tete {
+  background: #ffc600;
+  color: #1a237e;
+}
+.tbody {
+  background: url(./image/bh.jpg);
+  color: #fff;
+  font-size: 20px;
+}
+
+/* groupe a et groupe b start  */
+.groupe {
+  width: 90%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  background: url(./image/bg.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 70px;
+}
+.titre-groupe {
+  font-size: 30px;
+  font-family: wide latin;
+  background: url(./image/bh.jpg);
+  color: #fff;
+  border-bottom-left-radius: 70px;
+  border-bottom: #ffc600 2px solid;
+}
+.groupe ul li {
+  list-style: none;
+  font-family: cooper black;
+  padding: 10px;
+  border-bottom: 1px solid rgba(12, 79, 204, 0.424);
+  color: rgb(1, 221, 129);
+  font-size: 20px;
+  background: rgba(162, 0, 255, 0.329);
+  color: #ffc600;
+}
+.groupeA {
+  width: 40%;
+}
+.groupeB {
+  width: 40%;
+  margin: 0 0 0 220px;
+}
+/* groupe a et groupe b end  */
+
+/* affichage des matchs start */
+.affiche {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  color: #fff;
+}
+.affiche .titre-groupe {
+  font-size: 20px;
+  font-family: cambria;
+}
+.titre-groupe .nom-groupe {
+  float: left;
+  font-family: chiller;
+}
+.titre-groupe .logo {
+  float: right;
+}
+.affiche table {
+  width: auto;
+  height: auto;
+}
+.affiche table tr td {
+  margin: 10px;
+  padding: 10px;
+}
+.affiche .equipe-1 {
+  float: right;
+}
+.affiche .equipe-2 {
+  float: left;
+}
+.affiche-groupeA {
+  width: 50%;
+}
+.affiche-groupeB {
+  width: 50%;
+}
+.affiche-groupeA .titre-groupe,
+.affiche-groupeB .titre-groupe {
+  background: rgba(114, 6, 20, 0.781);
+  color: #ffc600;
+}
+.tr1 {
+  background: #011722ec;
+}
+.tr2 {
+  background: #011722d7;
+}
+
+/* affichage des matchs end */
+/* score start  */
+.score,
+.score-semiefinal {
+  background: #083141;
+  color: #ffc600;
+}
+.score-semiefinal {
+  width: auto;
+}
+/* score end  */
+/* boutton jouer start */
+.jouer {
+  background: url(./image/bh.jpg);
+}
+.jouer input {
+  width: 70px;
+  height: 100px;
+  font-family: constantia;
+  border: none;
+  background: url(./image/bh.jpg);
+  color: #fff;
+  cursor: pointer;
+  font-size: large;
+}
+.jouer input:hover {
+  color: #ffc600;
+}
+.jouer-final {
+  width: 70px;
+  height: auto;
+  background: url(./image/bh.jpg);
+}
+.jouer-final input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-family: constantia;
+  font-size: large;
+  color: #fff;
+  border: none;
+  background: url(./image/bh.jpg);
+}
+/* boutton jouer end */
+/* semie final start */
+.tableSemieFinal {
+  margin: 50px 280px;
+  width: 60%;
+}
+.tableSemieFinal tbody {
+  background: #4a148cd7;
+  color: rgba(244, 242, 248, 0.986);
+}
+.jouer-semie {
+  background: url(./image/bh.jpg);
+}
+.jouer-semie input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  background: url(./image/bh.jpg);
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+}
+.jouer-semie input:hover {
+  color: #ffc600;
+}
+/* .tableSemieFinal body{
+  background: url(./image/bh.jpg);
+} */
+/* semie final end */
+
+/* classement equipe par groupe start */
+.t-titre {
+  background: rgba(114, 6, 20, 0.781);
+}
+.classement table {
+  background: rgba(1, 1, 32, 0.479);
+  color: #fff;
+}
+.classement table .titre-groupe {
+  color: #ffc600;
+}
+.titre-groupe .nom-groupe img {
+  margin: 5px 0 0 0;
+}
+/* classement equipe par groupe end */
+.champion {
+  width: 100%;
+  height: 450px;
+  background: url(./image/champion.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  /* border: 10px solid #fff; */
+}
+.champion h1 {
+  bottom: 1000px;
+  color: #fff;
+  font-size: 40px;
+}
+.gagner {
+  margin-bottom: 700px;
+}
+.nom {
+  color: #ffc600;
+  font-size: 70px;
+}
+.f-final {
+  background: rgba(148, 6, 243, 0.445);
+}
+.nom {
+  color: #ffc600;
+  font-size: 70px;
+}
+.emPlace {
+  width: 100%;
+  display: flex;
+}
+.emPlace .em {
+  width: 30%;
+  background: rgba(26, 34, 126, 0.534);
+  color: #fff;
+  margin: 0 150px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #000;
+  text-align: center;
+}
+.em .nom {
+  color: #ffc600;
+  font-size: 40px;
+}

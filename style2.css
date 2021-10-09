@@ -1,0 +1,146 @@
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+  }
+  header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+  }
+  .button {
+    margin: 0 50px;
+    margin-left: 10px;
+  }
+  .button-tirage,
+  .button-calendrier {
+    margin: 10px 5px;
+    font-size: 15px;
+  }
+  header .logo {
+    margin: 0;
+  }
+  .responsive-b {
+    display: block;
+  }
+  /* corps page acceuil  */
+  .r-container table {
+    display: none;
+  }
+  .r-container {
+    display: none;
+    margin: 0;
+  }
+  .table-responsive {
+    display: block;
+    margin: 0;
+    float: left;
+  }
+  .table-responsive table {
+    float: left;
+    width: auto;
+  }
+  table {
+    background: none;
+    margin: 20px 0 0 0;
+  }
+  table tr td {
+    text-align: left;
+    background: rgba(0, 7, 51, 0.698);
+    color: #ffc600;
+  }
+  .tds {
+    background: url(./image/bh.jpg);
+    color: #fff;
+  }
+  /* groupe repartion  */
+  .titre-groupe {
+    height: auto;
+    color: #ffc600;
+    margin: 0;
+  }
+  .groupe {
+    display: block;
+    width: auto;
+    margin: 10px 0;
+  }
+  .groupe ul {
+    margin-right: 30px;
+  }
+  .groupe ul li {
+    background: url(./image/bh.jpg);
+    color: #fff;
+    border-bottom: 1px solid #ffc600;
+  }
+  .titre-groupe {
+    font-size: initial;
+    border-top: 2px solid #ffc600;
+    border-bottom-right-radius: 20px;
+  }
+  .groupeA,
+  .groupeB {
+    width: auto;
+  }
+  .groupeB {
+    margin: 0;
+  }
+  /* .................... affiche  */
+  .affiche {
+    display: block;
+  }
+  .affiche table,
+  .affiche-groupeA,
+  .affiche-groupeB {
+    width: 100%;
+  }
+  .affiche table tr td {
+    padding: 0;
+    text-align: center;
+  }
+  .affiche .equipe-1,
+  .affiche .equipe-2 {
+    float: none;
+  }
+  .jouer {
+    width: auto;
+  }
+  .jouer input {
+    width: auto;
+    font-size: 15px;
+  }
+
+  /* classement------------------------ */
+  .classement {
+    width: 100%;
+    height: auto;
+  }
+  .classementA,
+  .classementB {
+    width: 100;
+    overflow-x: scroll;
+  }
+  /* .............. Semie Final  */
+  .tableSemieFinal {
+    margin: 100px 0;
+    width: 100%;
+  }
+  .tableSemieFinal tr td {
+    padding: 0;
+    text-align: center;
+  }
+  .button-final {
+    margin: 20px 0 0 70px;
+  }
+  .body {
+    background: navy;
+  }
+  .ffr {
+    font-size: initial;
+  }
+  .t-final {
+    width: 100%;
+  }
+}
