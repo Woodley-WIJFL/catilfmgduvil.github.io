@@ -3,4 +3,4 @@
                                                                             NOM        PRENOM           
                                                                         1-> CATIL       Woodley     
                                                                         2-> DUVIL       Jephte Richard
-                                                                        3-> GACHETTE    Frantz Medy
+                                                                        3-> GACHETTE    Frantz Meddy
