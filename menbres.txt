@@ -1,0 +1,6 @@
+                                                                          les menbres du groupes:
+
+                                                                            NOM        PRENOM           
+                                                                        1-> CATIL       Woodley     
+                                                                        2-> DUVIL       Jephte Richard
+                                                                        3-> GACHETTE    Frantz Medy
