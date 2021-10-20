@@ -1,22 +1,30 @@
 <?php session_start();
-$f1 = rand(0, 7);
-$f2 = rand(0, 7);
-
 $pf1 = rand(0, 5);
 $pf2 = rand(0, 5);
+if (isset($_POST['pf']) && $_SESSION['matchpf']) {
+    $_SESSION['scorePFinal1']=intval($_POST['spf1']);    
+    $_SESSION['scorePFinal2']=intval($_POST['spf2']);
+    
+        if ($_SESSION['scorePFinal1'] == $_SESSION['scorePFinal2']) {
+                    $_SESSION['pFinal1'] = $pf1;
+                    $_SESSION['pFinal2'] = $pf2;
+                    $_SESSION['pTAB'] = false;
+                    while ($_SESSION['pFinal1'] == $_SESSION['pFinal2']) {
+                        $_SESSION['pFinal1'] = $pf1;
+                        $_SESSION['pFinal2'] = $pf2;
+                        }
+                    }
+
+             $_SESSION['matchpf'] = false;
+}
+
+$f1=rand(0,5);
+$f2=rand(0,5);
+
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coupe3eminfo.final .com</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
-</head>
 
 <body class="body">
     <header>
@@ -37,7 +45,7 @@ $pf2 = rand(0, 5);
         $_SESSION['equipe1pf'] = $_SESSION['groupeA'][0]["nom"];
     }
 
-    if ($_SESSION['demie_f2B_score'] > $_SESSION['demie_f2A_score'] || $_SESSION['demie_f2A_TAB'] > $_SESSION['demie_f2B_TAB']) {
+    if ($_SESSION['demie_f2B_score'] < $_SESSION['demie_f2A_score'] || $_SESSION['demie_f2A_TAB'] > $_SESSION['demie_f2B_TAB']) {
 
         $_SESSION['equipe2pf'] = $_SESSION['groupeA'][1]["nom"];
         $_SESSION['equipe2f'] = $_SESSION['groupeB'][0]["nom"];
@@ -57,30 +65,14 @@ $pf2 = rand(0, 5);
                 </th>
             </tr>
             <tr>
-                <td class="jouer-final">
-                    <form action="" method="post">
-                        <input type="submit" name="pFinal" value="Jouer">
-                    </form>
-                </td>
+                <form action="" method="post">
                 <td class="f-final"><?= $_SESSION['equipe1pf'] ?></td>
-                <td class="score"> -
-                    <?php
-                    if (isset($_POST['pFinal']) && $_SESSION['matchpf']) {
-                        $_SESSION['scorePFinal1'] = $f1;
-                        $_SESSION['scorePFinal2'] = $f2;
-
-                        if ($_SESSION['scorePFinal1'] == $_SESSION['scorePFinal2']) {
-                            $_SESSION['pFinal1'] = $pf1;
-                            $_SESSION['pFinal2'] = $pf2;
-                            $_SESSION['pTAB'] = false;
-                            while ($_SESSION['pFinal1'] == $_SESSION['pFinal2']) {
-                                $_SESSION['pFinal1'] = $pf1;
-                                $_SESSION['pFinal2'] = $pf2;
-                            }
-                        }
-
-                        $_SESSION['matchpf'] = false;
-                    }
+                <td class="score">
+                    <?php if($_SESSION['matchpf']) {?>
+                        <input min="0" max="10" class="input-corriger" type="number" name="spf1">
+                        <input min="0" max="10" class="input-corriger" type="number" name="spf2">
+                        <?php } elseif ($_SESSION['matchpf']==false) {
+                
                     if ($_SESSION['matchpf'] == false) {
                         if ($_SESSION['pTAB'] == false) {
                             echo '(' . $_SESSION['pFinal1'] . ') ';
@@ -90,11 +82,19 @@ $pf2 = rand(0, 5);
                             echo ' (' . $_SESSION['pFinal2'] . ')';
                         }
                     }
+                }
                     ?> -
                 </td>
                 <td class="f-final"><?= $_SESSION['equipe2pf'] ?></td>
+                    <td class="jouer"><input type="submit" value="JOUER" name="pf"></td>
+            </form>
             </tr>
         </table><br><br><br>
+
+
+
+
+
 
         <table class="t-final">
             <tr class="titre-groupe">
@@ -106,11 +106,7 @@ $pf2 = rand(0, 5);
                 </th>
             </tr>
             <tr>
-                <td class="jouer-final">
-                    <form action="" method="post">
-                        <input href="#champion" type="submit" name="final" value="Jouer">
-                    </form>
-                </td>
+               
                 <td class="f-final"><?= $_SESSION['equipe1f'] ?></td>
                 <td class="score">
                     - <?php
@@ -142,8 +138,13 @@ $pf2 = rand(0, 5);
                         ?> -
                 </td>
                 <td class="f-final"><?= $_SESSION['equipe2f'] ?></td>
+                 <td class="jouer">
+                    <form action="" method="post">
+                        <input href="#champion" type="submit" name="final" value="Jouer">
+                    </form>
+                </td>
             </tr>
-        </table>
+        </table><br><br><br>
     </div>
 </body>
 
@@ -178,7 +179,7 @@ if ($_SESSION['matchf'] == false) {
                 <h1>
                     <div class="nom"><?= $champion ?></div>
                     Champion <br>
-                    <img src="./image/medaille1.png" width="150" alt="">
+                    <img src="./image/medaille12.png" width="150" alt="">
                 </h1>
             </div>
         </div>
@@ -204,3 +205,15 @@ if (isset($_POST['final'])) {
 <?php
 }
 ?>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupe3eminfo.final .com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
